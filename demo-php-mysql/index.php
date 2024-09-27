@@ -33,10 +33,10 @@ $result = $conn->query($sql);
         <table class="table table-bordered table-striped">
             <thead class="thead-dark">
                 <tr>
-                    <th>ID</th>
-                    <th>Name (Tên)</th>
-                    <th>Average Score (Điểm Trung Bình)</th>
-                    <th>Image (Hình Ảnh)</th>
+                    <th>MSSV</th>
+                    <th>Tên</th>
+                    <th>Điểm Trung Bình</th>
+                    <th>Hình Ảnh</th>
                 </tr>
             </thead>
             <tbody>
@@ -45,7 +45,7 @@ $result = $conn->query($sql);
                     // Output data of each row
                     while ($row = $result->fetch_assoc()) {
                         echo "<tr>
-                            <td>{$row['id']}</td>
+                            <td>{$row['mssv']}</td>
                             <td>{$row['ten']}</td>
                             <td>{$row['dtb']}</td>
                             <td><img src=" . htmlspecialchars($row['hinhanh']) . " alt='Student Image' class='img-thumbnail' style='max-width: 100px;'></td>
