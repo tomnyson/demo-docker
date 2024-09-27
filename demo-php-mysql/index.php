@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";  // Change if hosted elsewhere
 $username = "root";         // Replace with your MySQL username
-$password = "Admin123@";             // Replace with your MySQL password
+$password = "";             // Replace with your MySQL password
 $dbname = "qlsinhvien";     // Replace with your database name
 
 // Create connection
@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // Query to select data from the 'sinhvien' table
-$sql = "SELECT id, ten, dtb, hinhanh FROM sinhvien";
+$sql = "SELECT * FROM sinhviens";
 $result = $conn->query($sql);
 ?>
 
@@ -48,7 +48,7 @@ $result = $conn->query($sql);
                             <td>{$row['id']}</td>
                             <td>{$row['ten']}</td>
                             <td>{$row['dtb']}</td>
-                            <td><img src=".htmlspecialchars($row['hinhanh'])." alt="Student Image" class="img-thumbnail" style="max-width: 100px;"></td>
+                            <td><img src=" . htmlspecialchars($row['hinhanh']) . " alt='Student Image' class='img-thumbnail' style='max-width: 100px;'></td>
                           </tr>";
                     }
                 } else {
